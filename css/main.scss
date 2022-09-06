@@ -1,11 +1,12 @@
 // Custom.scss
 // Option A: Include all of Bootstrap
 // Include any default variable overrides here (though functions won't be available)
-$primary:rgb(0, 0, 0);
-$primary-1:rgba(0, 0, 0, 1);
-$primary-opacity-8:rgba(255, 255, 255, 1);
-$primary-opacity-5:rgba(0, 0, 0, 0.8);
-$gray:#E6E6E6;
+$primary:rgb(231, 218, 231);
+$primary-1:rgba(255, 255, 255, 1);
+$primary-opacity-8:rgba(255, 255, 255, 0.8);
+$primary-opacity-5:rgba(255, 255, 255, 0.5);
+$transparant:rgba(255, 255, 255, 0);
+$gray:rgba(0, 0, 0, 0.5);
 $sale: rgba(167, 4, 4, 0.8);
 $headings-font-family: 'Nunito',sans-serif;
 $headings-font-weight: 800;
@@ -13,9 +14,12 @@ $font-family-base:'Poppins',sans-serif;
 
 $theme-colors:(
     "primary" : $primary,
+    "primary-1":$primary-1,
     "primary-opacity-8":$primary-opacity-8,
+    "primary-opacity-5":$primary-opacity-5,
     "gray": $gray,
-    "sale": $sale
+    "sale": $sale,
+    "transparant":$transparant,
 );
 //create your own map
 $custom-color:(
@@ -41,127 +45,42 @@ $utilities:(
 
 // Then add additional custom code here
 
-/****HEADER******/
-.announcement-bar {
-    font-size:0.8rem;
-    border-bottom:1px solid var(--bs-gray);
 
-
-    &__list{
-        padding:0;
-        margin: 0;
-        list-style-type: none;
-        display: inline-flex;
-        margin: 0 -10px;
-
-        li {
-            margin: 0 10px;
-            display: flex;
-            align-items: center;
-      
-            .bi {
-              background-color: var(--bs-icon-background);
-              display: inline-flex;
-              justify-content: center;
-              align-items: center;
-              width: 30px;
-              height: 30px;
-              margin-right: 6px;
-            }
-        }
+/****HEADER BRAND******/
+.navbar{
+    a{
+        color: $gray;
+        text-decoration: none;
     }
-    
-    @include media-breakpoint-down(lg) {
-        display: none;
-    }
-   
-}
-
-.site-header .site-header__logo{   
-    //  @include media-breakpoint-down(lg) {
-    //         display: none;
-    // }
-}
-
-
-
-/****MAIN MENU******/
-
-.main-navigation.landing{
-    
-    
-    a{  
-        text-transform: uppercase;
-        color:var(--bs-white);
-        padding: 1rem 1.5rem;
-        font-size:$font-size-sm;
-    }
-    
-
-    .menu-toggle{
-        background-color: $primary;
-        color: (--bs-white);
-        border:none;
-        background: none;
-    }
-    .current-menu-item {
-        text-decoration: underline;
-    }
-    
-    .sub-menu{
-        background-color: $primary-opacity-5;
-        border-radius: 5px;
-        li{   
-
-           a{   
-               padding: 0;
-               width: 118px;
-           }
+    .navbar-cart-landing{
+        color: $primary-1;
+        border: 0.5px solid $primary-opacity-5;
+        border-radius: 0.3rem;
+        background-color: $transparant;
+        opacity: 0.4;
+        a{
+            color: $primary-1
         }
 
     }
 
-
-    
+    .navbar-cart {
+        border-radius: 0.3rem;
+        background-color: $transparant;
+    }
 }
 
-.main-navigation.page{
-    font-weight:600;
-    border-bottom:1px solid var(--bs-gray);
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-
-    .current-menu-item {
-        text-decoration: underline;
-    }
-    a{  
-        text-transform: uppercase;
-        color:var(--bs-dark);
-        padding: 1rem 1.5rem;
-        font-size:$font-size-sm;
-    }
-    a:hover{
-        text-decoration: underline;
-    }
-    .menu-toggle{
-        font-weight:600;
-        color: (--bs-dark);
-        border:none;
-        background: none;
-    }
-    .sub-menu{
-        background-color: $primary-opacity-8;
-        border-radius: 5px;
-        li{   
-
-           a{   
-               padding: 0;
-               width: 118px;
-           }
-        }
-    }
-
-
+a.navbar-brand{
+    margin: 0 1rem 0 1rem ;
 }
+/****HEADER MAIN MENU******/
+
+a.nav-link{
+    margin: 0 1rem;
+}
+
+
+
 
 /******FRONT PAGE********/
 .carousel{
@@ -194,58 +113,9 @@ $utilities:(
     display: none;
 }
 
-/******CATAGORIES********/
-.categories{
-    background-color: #F9F9F9;
-    
-    .categories__col{
-        height:212px;
-        
-        img{
-            width:100%;
-            object-fit:cover;
-        }
-    }
-    
-    @include media-breakpoint-down(md){
-        .categories__col{
-            height:336px;
-        }
-    }
-}
 
-/******FOOTER********/
-.site-footer{
-    .menu{
-        margin:0;
-        padding:0;
-        list-style-type:none;
 
-        a{
-            color:$primary-1;
-            text-decoration: none;
-            display: block;
-            padding:0.3rem 0;
-        }
-        p{
-            color:$primary-1; 
-        }
 
-        a:hover{text-decoration:underline}
-    }
-}
-
-// .popular-products, .special-offers{
-//     .add_to_cart_button{
-//         display:block!important;
-//         text-align:center;
-//     }
-
-//     .attachment-woocommerce_thumbnail{
-//         border-radius:20px;
-//         overflow: hidden;
-//     }
-// }
 
 
 

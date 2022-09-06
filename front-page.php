@@ -20,10 +20,10 @@ get_header('landing');
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<a href="#"><img src="<?php echo get_template_directory_uri();?>/img/slider/object4.jpg" class="d-block w-100" alt="..."></a>
+						<a href="#"><img src="<?php echo get_template_directory_uri();?>/img/slider/slide2.jpg" class="d-block w-100" alt="..."></a>
 					</div>
 					<div class="carousel-item">
-					<a href="#"><img src="<?php echo get_template_directory_uri();?>/img/slider/object5.jpg" class="d-block w-100" alt="..."></a>
+					<a href="#"><img src="<?php echo get_template_directory_uri();?>/img/slider/slide1.jpg" class="d-block w-100" alt="..."></a>
 					</div>
 			
 				</div>

@@ -519,24 +519,27 @@ p.demo_store,
 		}
 	}
 
-	span.onsale {
-		min-height: 3.236em;
-		min-width: 3.236em;
-		// padding: 0.202em;
-		font-size: 1em;
-		font-weight: 700;
-		position: absolute;
-		text-align: center;
-		line-height: 3.236;
-		top: -0.5em;
-		left: -0.5em;
-		margin: 0;
-		border-radius: 100%;
-		background-color: $highlight;
-		color: $highlightext;
-		font-size: 0.857em;
-		z-index: 9;
-	}
+	// span.onsale {
+	// 	min-height: 3.236em;
+	// 	min-width: 3.236em;
+	// 	padding: 0.202em;
+	// 	font-size: 1em;
+	// 	font-weight: 700;
+	// 	position: absolute;
+	// 	text-align: center;
+	// 	line-height: 3.236;
+	// 	top: -0.5em;
+	// 	left: -0.5em;
+	// 	margin: 0;
+	// 	border-radius: 100%;
+	// 	background-color: $highlight;
+	// 	color: $highlightext;
+	// 	font-size: 0.857em;
+	// 	z-index: 9;
+	// 	top: 0;
+	// 	right: 0;
+	// 	left: auto;
+	// }
 
 	/**
 	 * Product loops
@@ -555,32 +558,25 @@ p.demo_store,
 		}
 	}
 
-	/**hover*/
-	// ul.products li.product:hover {
-	// 	.button{
-	// 		display: block;
-	// 	}
-		
-	// }
 
 	ul.products li.product {
 		
+		
 		.onsale {
-			top: 0;
-			right: 0;
-			left: auto;
-			margin: -0.5em -0.5em 0 0;
+			display: none;
+			
 		}
 
 		h3,
 		.woocommerce-loop-product__title,
 		.woocommerce-loop-category__title {
 			position: absolute !important;
-			top: 0;
+			bottom: 0;
 			right: 0;
 			left: 0;
 			padding: 0.5em 0;
 			font-size: 1em;
+			color: $primary;
 		}
 
 		a {
@@ -614,15 +610,18 @@ p.demo_store,
 		}
 		.woosq-btn{
 			position: absolute !important;
-			width: 100%;
+			width: 40%;
 			right: 0;
-			left: auto;
+			left: 0;
+			top: 0;
+			margin: auto;
+			background-color: rgba(255, 255, 255, 0.2);
+			padding: 0.2rem;
+			border: none;
+			color: $primary;
+			font-size: 0.5em;
 		}
-		.yith-wcqv-button{
-			// position: absolute !important;
-			right: 0;
-			left: auto;
-		}
+	
 		.product_type_grouped{
 			display: none;
 		}
@@ -636,13 +635,11 @@ p.demo_store,
 
 		.price {	
 			
-			color: $highlight;
+			color: $primary;
 			display: block;
 			font-weight: normal;
 			margin-top: -2.5rem;
-			font-size: 0.857em;
-			
-			
+			font-size: 0.7em;
 
 			del {
 				color: inherit;
@@ -663,6 +660,21 @@ p.demo_store,
 				color: rgba(desaturate($highlight, 75%), 0.5);
 			}
 		}
+	}
+
+	ul.products li.product:hover{
+		transition: .5s;
+		.price{
+			color: white;
+		}
+		.woosq-btn{
+			font-size:1em;		
+			color: white;	
+		}
+		
+	}
+	.woocommerce-loop-product__title{
+		display: none;
 	}
 
 	.woocommerce-result-count {

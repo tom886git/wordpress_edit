@@ -69,15 +69,15 @@
  * WooCommerce CSS Variables
  */
 :root {
-  --woocommerce: #c8c8c8;
+  --woocommerce: #e7dae7;
   --wc-green: #7ad03a;
   --wc-red: #a00;
   --wc-orange: #ffba00;
   --wc-blue: #2ea2cc;
-  --wc-primary: #c8c8c8;
+  --wc-primary: #e7dae7;
   --wc-primary-text: white;
-  --wc-secondary: #c8c8c8;
-  --wc-secondary-text: #fff;
+  --wc-secondary: #e7dae7;
+  --wc-secondary-text: white;
   --wc-highlight: #c80000;
   --wc-highligh-text: #facdcd;
   --wc-content-bg: #fff;
@@ -4833,7 +4833,7 @@ img.help_tip {
   height: 100%;
   text-align: center;
   content: "";
-  color: #c8c8c8;
+  color: #e7dae7;
 }
 
 .status-disabled::before {
